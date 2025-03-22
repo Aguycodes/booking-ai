@@ -11,6 +11,7 @@ fastapi==0.115.11
 filelock==3.18.0
 fonttools==4.56.0
 fsspec==2025.3.0
+gunicorn
 h11==0.14.0
 huggingface-hub==0.29.3
 idna==3.10
