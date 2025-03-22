@@ -1,0 +1,28 @@
+Approach to the Project
+1️.FastAPI & RAG System
+Data Processing: Loaded and cleaned hotel booking data from CSV.
+Analytics Implementation: Calculated revenue trends, cancellations, booking lead time, and geographical distribution.
+RAG-Based Q&A:
+1. Converted booking data into text format.
+2. Generated vector embeddings using sentence-transformers.
+3. Stored embeddings in FAISS for fast similarity search.
+4. Integrated an LLM for response generation.
+
+
+
+2️. Additional Features
+
+Real-Time Database Updates:
+1. Used SQLite for bookings.
+2. Auto-updated FAISS embeddings when new bookings were added.
+3. Query History Tracking: Stored user queries & responses in a database.
+4. Health Check API: Monitored database, FAISS, and LLM status.
+
+Challenges Encountered & Solutions
+
+1️.Handling Large Datasets in FAISS
+Storing large booking data in FAISS caused memory issues.
+2️.Slow API Response in RAG System
+LLM-generated answers were slow, especially with large retrievals.
+3️. Real-Time Data Updates
+FAISS does not support automatic updates; it required rebuilding the index.
